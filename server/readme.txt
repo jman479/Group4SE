@@ -17,3 +17,5 @@
     and /server/ ; then type the commands below into each terminal to update the projects node_modules
     - npm install
     - npm start
+
+6. Now you should be able to open and launch your project regularly with command: npm start
