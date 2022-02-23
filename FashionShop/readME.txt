@@ -27,4 +27,8 @@ Heroku (dns hosting)
     -  npm install
     -  npm start
 
-6. Now from here onwards, you just type '  npm start  ' in your console to run your developer local builds.
+6.  Now from here onwards, in our project within the /server/ you can launch by typing the command below
+   -   npm run server
+    Now from here onwards, in our project /client frontend/ and /dashboard/  directories type the command below to run your developer local builds. 
+   -   npm start
+   
