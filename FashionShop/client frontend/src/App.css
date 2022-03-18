@@ -4,7 +4,7 @@ body {
     place-items: center;
     font-family: "Metal Mania", cursive;
     color: var(--clr-neon);
-    background: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646728908/Twilight_ygnmtb.svg');
+    background: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646886716/discofloorpurplestripe_rjakzy.svg'); 
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -32,7 +32,6 @@ img{
     margin-bottom: 175px;
 }
 .container img {
-    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
     transform-origin: center;
     max-width: 510px;
     transform: perspective(800px) rotateY(25deg);
@@ -51,8 +50,14 @@ a {
   text-decoration: none;
   color: var(--clr-neon);
 }
+h6 {
+  font-size: 1.75rem;
+}
+h5{
+  color: #77fcfe;
+}
 a:hover {
-  color: white;
+    color: white;
 }
 i,
 a,
@@ -61,8 +66,6 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 span {
   padding: 0;
   margin: 0;
@@ -285,9 +288,9 @@ textarea:focus {
 .header {
   background-image: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646645979/brick-floor_ghfjsg.png');
   background-size: 1900px 160px;
-  font-size:24px; 
-  width:100%; 
-  height:100px; 
+  font-size: 24px; 
+  width: 100%; 
+  height: 100px; 
   position: fixed;
   text-align: center;
   top: 0px;
@@ -393,7 +396,7 @@ ul.headerNavBar li a
 }
 ul.headerNavBar li a:hover
 {
-	color: #45BEBE;
+	color: #77fcfe;
 	-webkit-text-stroke: 1px #000;
 	transition: 0.5s;
 }
@@ -409,9 +412,9 @@ ul.headerNavBar li a:after
 }
 ul.headerNavBar li a:hover:before 
 {
-	color: #000;
+	color: #3C0172;
 	z-index: 1;
-	-webkit-text-stroke: 1px #000;
+	-webkit-text-stroke: 2px #000;
 	transform: translate(10px,-10px);
 }
 ul.headerNavBar li a:hover:after 
@@ -425,7 +428,7 @@ ul.headerNavBar li a:hover:after
 /*header socials*/
 a.headerSocial {
     text-decoration: none;
-    color: #fff;
+    color: #77fcfe;
     margin: 1.35rem;
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -472,7 +475,7 @@ a.headerSocial:hover::after {
   color: rgb(13, 26, 38);
   position: fixed;
   right: 25px;
-  height: 60px;
+  height: 65px;
   line-height: 60px;
 
 }
@@ -487,20 +490,19 @@ a.headerSocial:hover::after {
       .nav-wrapper {
         width: 100%;
       }
-    } 
+    }
 
 .logo {
-  float: left;
-  margin-left: 28px;
-  font-size: 1.5em;
-  height: 60px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-} @media(max-width: 768px) {
+    margin-left: 300px;
+} @media(max-width: 280px) {
     .logo {
-/*       margin-left: 5px; */
+       margin-left: 300px; 
     }
   }
+.headerlogo {
+    margin-left: -8rem;
+    margin-top: 5px;
+}
 
 #navbar ul {
   display: inline-block;
@@ -524,7 +526,7 @@ a.headerSocial:hover::after {
   display: inline-block;
 }
 #navbar li a {
-  color: var(--clr-neon);
+  color: #77fcfe;
   display: block;
   font-size: 0.9em;
   height: 50px;
@@ -539,7 +541,7 @@ a.headerSocial:hover::after {
 }
 #navbar li a:hover {
   /* border-bottom: 1px solid rgb(28, 121, 184); */
-  color: white;
+  color: var(--clr-neon);
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
@@ -660,9 +662,10 @@ a.headerSocial:hover::after {
 /* END OF SHOP */
 /*Total cart products*/
 .totalCartProduct {
-    background-color: #45BEBE;
+    background-color: #77fcfe;
     color: var(--clr-neon);
     font-size: 1.8em;
+    border-radius: 80px;
 }
 
 /* NEWSLATTER */
@@ -860,7 +863,7 @@ a.headerSocial:hover::after {
   width: 100%;
   margin-top: 350px;
   border: 0;
-  background-color: rgba(0,0,0,0.1);
+  background-color: var(--clr-neon);
   border-radius: 5px;
   text-transform: uppercase;
   color: white;
@@ -937,6 +940,14 @@ a.headerSocial:hover::after {
   text-transform: uppercase;
   font-size: 1.5em;
 }
+.form-check-input {
+    background-color: #77fcfe;
+    width: 1.75rem;
+    height: 1.35rem;
+    margin-top: 16px;
+    border: solid;
+    border-color: var(--clr-neon);
+}
 .form input {
   padding: 20px 10px;
   font-size: 17px;
@@ -951,6 +962,7 @@ a.headerSocial:hover::after {
   background-color: var(--clr-neon);
   color: var(--clr-bg);
 }
+
 /* orders */
 .link {
   color: blue;
@@ -968,7 +980,6 @@ a.headerSocial:hover::after {
 .cart-item {
   margin: 40px 0;
   padding: 20px;
-  background-color: #000;
   box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09);
   position: relative;
 }
@@ -1081,25 +1092,29 @@ a.headerSocial:hover::after {
 
 /* Payment */
 .payment-container {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .radio-container {
-  padding: 10px 0;
-  text-align: start;
 }
 .radio-container input {
   font-size: 17px;
 }
 .radio-container label {
-  padding: 0 20px;
-  font-size: 17px;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  overflow: unset;
+  color: #77fcfe;
+  font-weight: bold;
+  text-shadow: 3px 3px hsl(317 100% 54%);
 }
 .order-detail p {
   margin-top: 2px;
 }
 .order-detail {
   padding: 30px 0;
-  background-color: #e5fee9;
+  border-color: var(--clr-neon);
+  border: solid;
+  border-radius: 90px;
 }
 .order-detail h5 {
   margin-bottom: 6px;
@@ -1111,12 +1126,15 @@ a.headerSocial:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 30px;
+  color: var(--clr-neon);
+  background-color: #77fcfe;
 }
 .order-product {
-  margin: 40px 0;
-  border-bottom: 2px solid #f3f3f3;
+  margin: 40px 0px;
+  border-bottom: 2px solid var(--clr-neon);
   position: relative;
+  padding-bottom: 10px;
 }
 .order-product h4 {
   font-size: 13px;
@@ -1128,14 +1146,16 @@ a.headerSocial:hover::after {
   object-fit: contain;
 }
 .table-bordered {
-  background-color: #f3f3f3;
+  background-color: var(--clr-neon);
+  font-size: 20px;
+  font-weight: bold;
 }
 .subtotal-order button {
   width: 100%;
   padding: 15px 0;
   border: 0px;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.4em;
   background-color: var(--clr-neon);
   color: var(--clr-bg);
 }
