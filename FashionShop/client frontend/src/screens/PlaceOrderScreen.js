@@ -17,22 +17,13 @@ const PlaceOrderScreen = ({ history }) => {
   // Calculate Price
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2);
-    };
-  const shippingTaxPrice = (num) => {
-    return (num +15).toFixed(2);
   };
 
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
   cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 15); // if the price is more than 100 shipping price is 0 if false shipping price is 15
-    if (cart.shippingPrice < 15) {
-        cart.taxPrice = addDecimals(Number((0.0825 * cart.itemsPrice).toFixed(2))); // 8.25 percent tax applied excluding free shipping
-    }
-    else {
-        var newTaxPrice = shippingTaxPrice(Number(cart.itemsPrice));  // add 15 before tax applied
-        cart.taxPrice = addDecimals(Number((0.0825 * newTaxPrice).toFixed(2))); // 8.25 percent tax applied including shipping
-    }
+  cart.taxPrice = addDecimals(Number((0.0725 * cart.itemsPrice).toFixed(2))); //7.25 percent tax 
   cart.totalPrice = (
     Number(cart.itemsPrice) +
     Number(cart.shippingPrice) +

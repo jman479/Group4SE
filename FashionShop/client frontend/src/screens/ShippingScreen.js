@@ -26,11 +26,12 @@ const ShippingScreen = ({ history }) => {
       <Header />
       <div className="container d-flex justify-content-center align-items-center login-center">
         <form
-          className="Login col-md-8 col-lg-4 col-11"
+          className="Login col-lg-4 col-11"
           onSubmit={submitHandler}
         >
           <h6>DELIVERY ADDRESS</h6>
           <input
+            className="inputBackground"
             type="text"
             placeholder="Enter address"
             value={address}
@@ -38,6 +39,7 @@ const ShippingScreen = ({ history }) => {
             onChange={(e) => setAddress(e.target.value)}
           />
           <input
+            className="inputBackground"
             type="text"
             placeholder="Enter city"
             value={city}
@@ -45,6 +47,7 @@ const ShippingScreen = ({ history }) => {
             onChange={(e) => setCity(e.target.value)}
           />
           <input
+            className="inputBackground"
             type="text"
             placeholder="Enter postal code"
             value={postalCode}
@@ -52,13 +55,14 @@ const ShippingScreen = ({ history }) => {
             onChange={(e) => setPostalCode(e.target.value)}
           />
           <input
+            className="inputBackground"
             type="text"
             placeholder="Enter country"
             value={country}
             required
             onChange={(e) => setCountry(e.target.value)}
           />
-          <button type="submit">Continue</button>
+          <button className="neon-button" type="submit">Continue</button>
         </form>
       </div>
     </>

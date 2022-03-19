@@ -50,14 +50,18 @@ a {
   text-decoration: none;
   color: var(--clr-neon);
 }
-h6 {
+h6{
   font-size: 1.75rem;
+}
+h4 {
+  color: #77fcfe;
 }
 h5{
   color: #77fcfe;
 }
 a:hover {
-    color: white;
+    color: #77fcfe;
+    transition: all 0.3s ease-in-out;
 }
 i,
 a,
@@ -65,7 +69,6 @@ p,
 h1,
 h2,
 h3,
-h4,
 span {
   padding: 0;
   margin: 0;
@@ -120,6 +123,7 @@ textarea:focus {
     cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon);
+    background-color: transparent;
     border: var(--clr-neon) 0.125em solid;
     padding: 0.25em 1em;
     border-radius: 0.25em;
@@ -152,7 +156,7 @@ textarea:focus {
 .neon-button2:focus {
     text-shadow: none;
     transition: all 0.3s ease-in-out;
-    font-color: white;
+    color: #77fcfe;
 }
 
     .neon-button2:hover::before,
@@ -171,7 +175,7 @@ textarea:focus {
     cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon);
-    background-color: #000;
+    background-color: transparent;
     border: var(--clr-neon) 0.125em solid;
     padding: 0.25em 0.5em;
     border-radius: 0.25em;
@@ -179,6 +183,7 @@ textarea:focus {
     box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
     margin-right: 2em;
     position: relative;
+    transition: all 0.3s ease-in-out;
 }
 .neon-button3::before {
     pointer-events: none;
@@ -200,13 +205,12 @@ textarea:focus {
     right: 0;
     box-shadow: 0 0 2em 0.5em var(--clr-neon);
     opacity: 0;
-    background-color: var(--clr-bg);
-    z-index: -1;
+    background-color: transparent;
     transition: all 0.3s ease-in-out;
 }
 .neon-button3:hover,
 .neon-button3:focus {
-    color: var(--clr-neon);
+    color: #77fcfe;
     text-shadow: none;
     transition: all 0.3s ease-in-out;
 }
@@ -214,11 +218,13 @@ textarea:focus {
     .neon-button3:hover::before,
     .neon-button3:focus::before {
         opacity: 1;
+        transition: all 0.3s ease-in-out;
     }
 
     .neon-button3:hover::after,
     .neon-button3:focus::after {
         opacity: 1;
+        transition: all 0.3s ease-in-out;
     }
 .neon-button {
     font-size: 2rem;
@@ -257,14 +263,14 @@ textarea:focus {
         right: 0;
         box-shadow: 0 0 2em 0.5em var(--clr-neon);
         opacity: 0;
-        background-color: var(--clr-neon);
+        background-color: transparent;
         z-index: -1;
         transition: all 0.3s ease-in-out;
     }
 
     .neon-button:hover,
     .neon-button:focus {
-        color: var(--clr-neon);
+        color: #77fcfe;
         text-shadow: none;
         transition: all 0.3s ease-in-out;
     }
@@ -307,7 +313,6 @@ textarea:focus {
       margin-left: 25px;
       a {
         text-decoration: none;
-        color: $grayText;
         &:hover {
           color: var(--clr-neon);
         }
@@ -638,7 +643,7 @@ a.headerSocial:hover::after {
   transition: all 0.3s ease-in-out;
 }
 .shoptext p a:hover {
-  color: white;
+  color: #77fcfe;
   font-size: 2.00em;
   transition: all 0.3s ease-in-out;
 }
@@ -848,12 +853,15 @@ a.headerSocial:hover::after {
   font-size: 25px;
 }
 .Login input {
-  width: 80%;
-  padding: 20px 0px 0px 4px;
+  width: 125%;
+  justify-content: center;
+  padding: 15px 0px 0px 6px;
   margin-top: 7px;
+  margin-left: -30px;
   border: 1px solid var(--clr-neon);
-  border-radius: 1px;
+  border-radius: 20px;
   color: var(--clr-neon);
+  text-align: center;
 }
 .Login input:focus {
   outline: 0px;
@@ -861,7 +869,7 @@ a.headerSocial:hover::after {
 .Login button,
 .Login2 button {
   width: 100%;
-  margin-top: 350px;
+  margin-top: 200px;
   border: 0;
   background-color: var(--clr-neon);
   border-radius: 5px;
@@ -997,7 +1005,7 @@ a.headerSocial:hover::after {
   cursor: pointer;
 }
 .remove-button:hover {
-  background-color: white;
+  background-color: #77fcfe;
   width: 30px;
   height: 30px;
   border-radius: 100px;
@@ -1005,7 +1013,6 @@ a.headerSocial:hover::after {
   top: 80px;
   left: 10px;
   font-size: 19px;
-  color: var(--clr-bg);
   cursor: pointer;
 }
 .cart-image img {
@@ -1017,6 +1024,10 @@ a.headerSocial:hover::after {
   font-weight: bold; 
   font-size: 2.1em;
 
+}.cart-text a h4:hover{
+  font-weight: bold; 
+  font-size: 2.1em;
+  color: #77fcfe;
 }
 .cart-price h4 {
   font-size: 2.75em;
@@ -1028,8 +1039,11 @@ a.headerSocial:hover::after {
   color: #7a7a7a;
 }
 .cart-qty select {
+  background-color: transparent;
+  background: transparent;
   width: 100%;
-  font-size: 15px;
+  font-size: 20px;
+  color: var(--clr-neon);
   padding: 15px;
   border: 1px solid var(--clr-neon);
   border-radius: 5px;
@@ -1055,7 +1069,7 @@ a.headerSocial:hover::after {
 }
 .total .total-price {
   font-size: 3.25em;
-  color: var(--clr-neon);
+  color: #77fcfe;
   font-weight: bold;
 }
 .cart-buttons {
@@ -1147,8 +1161,12 @@ a.headerSocial:hover::after {
 }
 .table-bordered {
   background-color: var(--clr-neon);
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
+}
+tr{
+    color: #77fcfe;
+    border-color: #77fcfe;
 }
 .subtotal-order button {
   width: 100%;
@@ -1158,6 +1176,10 @@ a.headerSocial:hover::after {
   font-size: 1.4em;
   background-color: var(--clr-neon);
   color: var(--clr-bg);
+}
+.inputBackground {
+  background-color: #77fcfe;
+  opacity: 0.8;
 }
 
 /* Pagination */

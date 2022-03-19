@@ -100,12 +100,12 @@ const CartScreen = ({ match, location, history }) => {
             </div>
             <hr />
             <div className="cart-buttons d-flex align-items-center row">
-              <Link to="/" className="col-md-6 neon-button justify-content-md-center">
-                <button>Continue Shopping</button>
+              <Link to="/" className="col-md-6 justify-content-md-center">
+                <button className="neon-button">Continue Shopping</button>
               </Link>
               {total > 0 && (
-                <div className="neon-button col-md-6 d-flex justify-content-md-center mt-3 mt-md-0">
-                  <button onClick={checkOutHandler}>Checkout</button>
+                <div className="col-md-6 d-flex justify-content-md-center mt-3 mt-md-0">
+                  <button className="neon-button" onClick={checkOutHandler}>Checkout</button>
                 </div>
               )}
             </div>
