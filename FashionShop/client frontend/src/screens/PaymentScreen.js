@@ -43,7 +43,7 @@ const PaymentScreen = ({ history }) => {
             </div>
           </div>
 
-          <button type="submit">Continue</button>
+          <button className="neon-button3" type="submit">Continue</button>
         </form>
       </div>
     </>

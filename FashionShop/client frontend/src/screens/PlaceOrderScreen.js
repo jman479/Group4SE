@@ -22,8 +22,8 @@ const PlaceOrderScreen = ({ history }) => {
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
-  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
-  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)));
+  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 15); // if the price is more than 100 shipping price is 0 if false shipping price is 15
+  cart.taxPrice = addDecimals(Number((0.0725 * cart.itemsPrice).toFixed(2))); //7.25 percent tax 
   cart.totalPrice = (
     Number(cart.itemsPrice) +
     Number(cart.shippingPrice) +
@@ -157,7 +157,7 @@ const PlaceOrderScreen = ({ history }) => {
                   <td>
                     <strong>Shipping</strong>
                   </td>
-                  <td>${cart.shippingPrice-80}</td>
+                  <td>${cart.shippingPrice}</td>
                 </tr>
                 <tr>
                   <td>

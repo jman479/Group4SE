@@ -4,7 +4,7 @@ body {
     place-items: center;
     font-family: "Metal Mania", cursive;
     color: var(--clr-neon);
-    background: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646728908/Twilight_ygnmtb.svg');
+    background: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646886716/discofloorpurplestripe_rjakzy.svg'); 
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -32,7 +32,6 @@ img{
     margin-bottom: 175px;
 }
 .container img {
-    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
     transform-origin: center;
     max-width: 510px;
     transform: perspective(800px) rotateY(25deg);
@@ -51,8 +50,18 @@ a {
   text-decoration: none;
   color: var(--clr-neon);
 }
+h6{
+  font-size: 1.75rem;
+}
+h4 {
+  color: #77fcfe;
+}
+h5{
+  color: #77fcfe;
+}
 a:hover {
-  color: white;
+    color: #77fcfe;
+    transition: all 0.3s ease-in-out;
 }
 i,
 a,
@@ -60,9 +69,6 @@ p,
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 span {
   padding: 0;
   margin: 0;
@@ -117,6 +123,7 @@ textarea:focus {
     cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon);
+    background-color: transparent;
     border: var(--clr-neon) 0.125em solid;
     padding: 0.25em 1em;
     border-radius: 0.25em;
@@ -149,7 +156,7 @@ textarea:focus {
 .neon-button2:focus {
     text-shadow: none;
     transition: all 0.3s ease-in-out;
-    font-color: white;
+    color: #77fcfe;
 }
 
     .neon-button2:hover::before,
@@ -168,7 +175,7 @@ textarea:focus {
     cursor: pointer;
     text-decoration: none;
     color: var(--clr-neon);
-    background-color: #000;
+    background-color: transparent;
     border: var(--clr-neon) 0.125em solid;
     padding: 0.25em 0.5em;
     border-radius: 0.25em;
@@ -176,6 +183,7 @@ textarea:focus {
     box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
     margin-right: 2em;
     position: relative;
+    transition: all 0.3s ease-in-out;
 }
 .neon-button3::before {
     pointer-events: none;
@@ -197,13 +205,12 @@ textarea:focus {
     right: 0;
     box-shadow: 0 0 2em 0.5em var(--clr-neon);
     opacity: 0;
-    background-color: var(--clr-bg);
-    z-index: -1;
+    background-color: transparent;
     transition: all 0.3s ease-in-out;
 }
 .neon-button3:hover,
 .neon-button3:focus {
-    color: var(--clr-neon);
+    color: #77fcfe;
     text-shadow: none;
     transition: all 0.3s ease-in-out;
 }
@@ -211,11 +218,13 @@ textarea:focus {
     .neon-button3:hover::before,
     .neon-button3:focus::before {
         opacity: 1;
+        transition: all 0.3s ease-in-out;
     }
 
     .neon-button3:hover::after,
     .neon-button3:focus::after {
         opacity: 1;
+        transition: all 0.3s ease-in-out;
     }
 .neon-button {
     font-size: 2rem;
@@ -254,14 +263,14 @@ textarea:focus {
         right: 0;
         box-shadow: 0 0 2em 0.5em var(--clr-neon);
         opacity: 0;
-        background-color: var(--clr-neon);
+        background-color: transparent;
         z-index: -1;
         transition: all 0.3s ease-in-out;
     }
 
     .neon-button:hover,
     .neon-button:focus {
-        color: var(--clr-neon);
+        color: #77fcfe;
         text-shadow: none;
         transition: all 0.3s ease-in-out;
     }
@@ -285,9 +294,9 @@ textarea:focus {
 .header {
   background-image: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646645979/brick-floor_ghfjsg.png');
   background-size: 1900px 160px;
-  font-size:24px; 
-  width:100%; 
-  height:100px; 
+  font-size: 24px; 
+  width: 100%; 
+  height: 100px; 
   position: fixed;
   text-align: center;
   top: 0px;
@@ -304,7 +313,6 @@ textarea:focus {
       margin-left: 25px;
       a {
         text-decoration: none;
-        color: $grayText;
         &:hover {
           color: var(--clr-neon);
         }
@@ -393,7 +401,7 @@ ul.headerNavBar li a
 }
 ul.headerNavBar li a:hover
 {
-	color: #45BEBE;
+	color: #77fcfe;
 	-webkit-text-stroke: 1px #000;
 	transition: 0.5s;
 }
@@ -409,9 +417,9 @@ ul.headerNavBar li a:after
 }
 ul.headerNavBar li a:hover:before 
 {
-	color: #000;
+	color: #3C0172;
 	z-index: 1;
-	-webkit-text-stroke: 1px #000;
+	-webkit-text-stroke: 2px #000;
 	transform: translate(10px,-10px);
 }
 ul.headerNavBar li a:hover:after 
@@ -425,7 +433,7 @@ ul.headerNavBar li a:hover:after
 /*header socials*/
 a.headerSocial {
     text-decoration: none;
-    color: #fff;
+    color: #77fcfe;
     margin: 1.35rem;
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -472,7 +480,7 @@ a.headerSocial:hover::after {
   color: rgb(13, 26, 38);
   position: fixed;
   right: 25px;
-  height: 60px;
+  height: 65px;
   line-height: 60px;
 
 }
@@ -487,20 +495,19 @@ a.headerSocial:hover::after {
       .nav-wrapper {
         width: 100%;
       }
-    } 
+    }
 
 .logo {
-  float: left;
-  margin-left: 28px;
-  font-size: 1.5em;
-  height: 60px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-} @media(max-width: 768px) {
+    margin-left: 300px;
+} @media(max-width: 280px) {
     .logo {
-/*       margin-left: 5px; */
+       margin-left: 300px; 
     }
   }
+.headerlogo {
+    margin-left: -8rem;
+    margin-top: 5px;
+}
 
 #navbar ul {
   display: inline-block;
@@ -524,7 +531,7 @@ a.headerSocial:hover::after {
   display: inline-block;
 }
 #navbar li a {
-  color: var(--clr-neon);
+  color: #77fcfe;
   display: block;
   font-size: 0.9em;
   height: 50px;
@@ -539,7 +546,7 @@ a.headerSocial:hover::after {
 }
 #navbar li a:hover {
   /* border-bottom: 1px solid rgb(28, 121, 184); */
-  color: white;
+  color: var(--clr-neon);
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
@@ -636,7 +643,7 @@ a.headerSocial:hover::after {
   transition: all 0.3s ease-in-out;
 }
 .shoptext p a:hover {
-  color: white;
+  color: #77fcfe;
   font-size: 2.00em;
   transition: all 0.3s ease-in-out;
 }
@@ -660,9 +667,10 @@ a.headerSocial:hover::after {
 /* END OF SHOP */
 /*Total cart products*/
 .totalCartProduct {
-    background-color: #45BEBE;
+    background-color: #77fcfe;
     color: var(--clr-neon);
     font-size: 1.8em;
+    border-radius: 80px;
 }
 
 /* NEWSLATTER */
@@ -845,12 +853,15 @@ a.headerSocial:hover::after {
   font-size: 25px;
 }
 .Login input {
-  width: 80%;
-  padding: 20px 0px 0px 4px;
+  width: 125%;
+  justify-content: center;
+  padding: 15px 0px 0px 6px;
   margin-top: 7px;
+  margin-left: -30px;
   border: 1px solid var(--clr-neon);
-  border-radius: 1px;
+  border-radius: 20px;
   color: var(--clr-neon);
+  text-align: center;
 }
 .Login input:focus {
   outline: 0px;
@@ -858,9 +869,9 @@ a.headerSocial:hover::after {
 .Login button,
 .Login2 button {
   width: 100%;
-  margin-top: 350px;
+  margin-top: 200px;
   border: 0;
-  background-color: rgba(0,0,0,0.1);
+  background-color: var(--clr-neon);
   border-radius: 5px;
   text-transform: uppercase;
   color: white;
@@ -937,6 +948,14 @@ a.headerSocial:hover::after {
   text-transform: uppercase;
   font-size: 1.5em;
 }
+.form-check-input {
+    background-color: #77fcfe;
+    width: 1.75rem;
+    height: 1.35rem;
+    margin-top: 16px;
+    border: solid;
+    border-color: var(--clr-neon);
+}
 .form input {
   padding: 20px 10px;
   font-size: 17px;
@@ -951,6 +970,7 @@ a.headerSocial:hover::after {
   background-color: var(--clr-neon);
   color: var(--clr-bg);
 }
+
 /* orders */
 .link {
   color: blue;
@@ -968,7 +988,6 @@ a.headerSocial:hover::after {
 .cart-item {
   margin: 40px 0;
   padding: 20px;
-  background-color: #000;
   box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09);
   position: relative;
 }
@@ -986,7 +1005,7 @@ a.headerSocial:hover::after {
   cursor: pointer;
 }
 .remove-button:hover {
-  background-color: white;
+  background-color: #77fcfe;
   width: 30px;
   height: 30px;
   border-radius: 100px;
@@ -994,7 +1013,6 @@ a.headerSocial:hover::after {
   top: 80px;
   left: 10px;
   font-size: 19px;
-  color: var(--clr-bg);
   cursor: pointer;
 }
 .cart-image img {
@@ -1006,6 +1024,10 @@ a.headerSocial:hover::after {
   font-weight: bold; 
   font-size: 2.1em;
 
+}.cart-text a h4:hover{
+  font-weight: bold; 
+  font-size: 2.1em;
+  color: #77fcfe;
 }
 .cart-price h4 {
   font-size: 2.75em;
@@ -1017,8 +1039,11 @@ a.headerSocial:hover::after {
   color: #7a7a7a;
 }
 .cart-qty select {
+  background-color: transparent;
+  background: transparent;
   width: 100%;
-  font-size: 15px;
+  font-size: 20px;
+  color: var(--clr-neon);
   padding: 15px;
   border: 1px solid var(--clr-neon);
   border-radius: 5px;
@@ -1044,7 +1069,7 @@ a.headerSocial:hover::after {
 }
 .total .total-price {
   font-size: 3.25em;
-  color: var(--clr-neon);
+  color: #77fcfe;
   font-weight: bold;
 }
 .cart-buttons {
@@ -1081,25 +1106,29 @@ a.headerSocial:hover::after {
 
 /* Payment */
 .payment-container {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .radio-container {
-  padding: 10px 0;
-  text-align: start;
 }
 .radio-container input {
   font-size: 17px;
 }
 .radio-container label {
-  padding: 0 20px;
-  font-size: 17px;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  overflow: unset;
+  color: #77fcfe;
+  font-weight: bold;
+  text-shadow: 3px 3px hsl(317 100% 54%);
 }
 .order-detail p {
   margin-top: 2px;
 }
 .order-detail {
   padding: 30px 0;
-  background-color: #e5fee9;
+  border-color: var(--clr-neon);
+  border: solid;
+  border-radius: 90px;
 }
 .order-detail h5 {
   margin-bottom: 6px;
@@ -1111,12 +1140,15 @@ a.headerSocial:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 30px;
+  color: var(--clr-neon);
+  background-color: #77fcfe;
 }
 .order-product {
-  margin: 40px 0;
-  border-bottom: 2px solid #f3f3f3;
+  margin: 40px 0px;
+  border-bottom: 2px solid var(--clr-neon);
   position: relative;
+  padding-bottom: 10px;
 }
 .order-product h4 {
   font-size: 13px;
@@ -1128,16 +1160,26 @@ a.headerSocial:hover::after {
   object-fit: contain;
 }
 .table-bordered {
-  background-color: #f3f3f3;
+  background-color: var(--clr-neon);
+  font-size: 30px;
+  font-weight: bold;
+}
+tr{
+    color: #77fcfe;
+    border-color: #77fcfe;
 }
 .subtotal-order button {
   width: 100%;
   padding: 15px 0;
   border: 0px;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.4em;
   background-color: var(--clr-neon);
   color: var(--clr-bg);
+}
+.inputBackground {
+  background-color: #77fcfe;
+  opacity: 0.8;
 }
 
 /* Pagination */

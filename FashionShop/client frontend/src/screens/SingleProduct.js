@@ -114,10 +114,7 @@ const SingleProduct = ({ history, match }) => {
                             )}
                           </select>
                         </div>
-                        <button
-                          onClick={AddToCartHandle}
-                          className="neon-button"
-                        >
+                        <button onClick={AddToCartHandle} className="neon-button2">
                           Add To Cart
                         </button>
                       </>

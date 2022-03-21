@@ -37,7 +37,7 @@ const Header = () => {
               <div className="row ">
                 <div className="col-6 d-flex align-items-center">
                   <Link className="navbar-brand" to="/">
-                    <img alt="logo" src="/images/logo.png" />
+                    <img alt="logo" src="/images/headerlogosmall.png" />
                   </Link>
                 </div>
                 <div className="col-6 d-flex align-items-center justify-content-end Login-Register">
@@ -94,8 +94,8 @@ const Header = () => {
           <div className="pc-header">
             <div className="row">
               <div className="col-md-1 d-flex align-items-center">
-                <Link className="neon-button2" to="/">
-                  <img alt="logo" src="/images/logo.png" />
+                <Link to="/">
+                  <img className="headerlogo" alt="logo" src="/images/headerlogosmall.png" />
                 </Link>
               </div>
                 
@@ -130,11 +130,11 @@ const Header = () => {
               <nav id="navbar" className="col-md-6 col-8 d-flex align-items-center">
                 <div class="nav-wrapper">
                   <ul id="menu">
-                   <li><a href="#Girls">Girls</a></li>
-                   <li><a href="#Guys">Guys</a></li>
-                   <li><a href="#Accesories">Accesories</a></li>
-                   <li><a href="#About">About</a></li>
-                   <li><a href="#Custom">Custom</a></li>
+                   <li><a href="/GirlsScreen">Girls</a></li>
+                   <li><a href="/GuysScreen">Guys</a></li>
+                   <li><a href="/Accessories">Accessories</a></li>
+                   <li><a href="/About">About</a></li>
+                   <li><a href="/Custom">Custom</a></li>
                   </ul>
                </div>
               </nav>
@@ -185,11 +185,11 @@ const Header = () => {
         <div className="container">
             <div>
               <ul className="headerNavBar">
-                <li><a href="" data-text="Girls">Girls</a></li>
-                <li><a href="" data-text="Guys">Guys</a></li>
-                <li><a href="" data-text="Accessories">Accessories</a></li>
-                <li><a href="" data-text="About">About</a></li>
-                <li><a href="" data-text="Contact">Contact</a></li>
+                <li><a href="/GirlsScreen" data-text="Girls">Girls</a></li>
+                <li><a href="/GuysScreen" data-text="Guys">Guys</a></li>
+                <li><a href="/Accessories" data-text="Accessories">Accessories</a></li>
+                <li><a href="/About" data-text="About">About</a></li>
+                <li><a href="/Custom" data-text="Contact">Contact</a></li>
               </ul>
             </div>
         </div>

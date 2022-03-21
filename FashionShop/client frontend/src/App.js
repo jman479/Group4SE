@@ -15,6 +15,10 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import NotFound from "./screens/NotFound";
 import GirlsScreen from "./screens/GirlsScreen";
+import GuysScreen from "./screens/GuysScreen";
+import Accessories from "./screens/Accessories";
+import About from "./screens/About";
+import Custom from "./screens/Custom";
 import PrivateRouter from "./PrivateRouter";
 
 
@@ -33,6 +37,11 @@ const App = () => {
         <Route path="/products/:id" component={SingleProduct} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/girlsscreen" component={GirlsScreen} />
+        <Route path="/guysscreen" component={GuysScreen} />
+        <Route path="/accessories" component={Accessories} />
+        <Route path="/about" component={About} />
+        <Route path="/custom" component={Custom} />
         <PrivateRouter path="/profile" component={ProfileScreen} />
         <Route path="/cart/:id?" component={CartScreen} />
         <PrivateRouter path="/shipping" component={ShippingScreen} />
