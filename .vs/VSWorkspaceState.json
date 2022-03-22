@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\FashionShop",
-    "\\FashionShop\\client frontend",
-    "\\FashionShop\\client frontend\\src",
-    "\\FashionShop\\client frontend\\src\\screens"
+    "\\FashionShop\\client frontend\\src\\screens",
+    "\\FashionShop\\dashboard",
+    "\\FashionShop\\server"
   ],
+  "SelectedNode": "\\FashionShop\\server\\readME.txt.txt",
   "PreviewInSolutionExplorer": false
 }
