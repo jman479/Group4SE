@@ -119,7 +119,7 @@ const Header = () => {
                   <input
                     type="search"
                     className="neon-button3"
-                    placeholder="Product Description"
+                    placeholder="Search for items"
                     onChange={(e) => setKeyword(e.target.value)}
                   />
                   <button type="submit" className="neon-button3">
