@@ -25,8 +25,8 @@ a.disabled {
   pointer-events: none;
 }
 .btn-primary {
-  background-color: #FC95CF !important;
-  border: 1px solid #FC95CF !important;
+  background-color: var(--clr-neon) !important;
+  border: 1px solid var(--clr-neon) !important;
 }
 .Header-green {
   background-color: #FC95CF;
@@ -150,9 +150,183 @@ a.disabled {
     --clr-neon: hsl(317 100% 54%);
     --clr-bg: hsl(323 21% 16%);
 }
+.text {
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+.neon-button2 {
+    font-size: 2rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    background-color: transparent;
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.7em 0 var(--clr-neon), 0 0 0.7em 0 var(--clr-neon);
+    position: relative;
+}
+.neon-button2::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.neon-button2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+.neon-button2:hover,
+.neon-button2:focus {
+    text-shadow: none;
+    transition: all 0.3s ease-in-out;
+    color: #77fcfe;
+}
+
+    .neon-button2:hover::before,
+    .neon-button2:focus::before {
+        opacity: 0;
+    }
+
+    .neon-button2:hover::after,
+    .neon-button2:focus::after {
+        opacity: 1;
+        
+    }
+.neon-button3 {
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    background-color: transparent;
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    margin-right: 2em;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.neon-button3::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(3em);
+    opacity: 0.4;
+}
+.neon-button3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+.neon-button3:hover,
+.neon-button3:focus {
+    color: white;
+    text-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
+    .neon-button3:hover::before,
+    .neon-button3:focus::before {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .neon-button3:hover::after,
+    .neon-button3:focus::after {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+    }
+.neon-button {
+    font-size: 2rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: relative;
+}
+
+    .neon-button::before {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background: var(--clr-neon);
+        top: 120%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+        filter: blur(1em);
+        opacity: 0.7;
+    }
+
+    .neon-button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 2em 0.5em var(--clr-neon);
+        opacity: 0;
+        background-color: transparent;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .neon-button:hover,
+    .neon-button:focus {
+        color: #77fcfe;
+        text-shadow: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .neon-button:hover::before,
+        .neon-button:focus::before {
+            opacity: 1;
+        }
+
+        .neon-button:hover::after,
+        .neon-button:focus::after {
+            opacity: 1;
+        }
+
 body {
-  position: relative;
-  min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
+    background-image: url('https://res.cloudinary.com/dqbkfteqj/image/upload/c_scale,e_auto_color,h_1304,w_1964/v1646562640/bricks_bwz7xr.png');
+    background-repeat: no-repeat;
 }
 
 body.offcanvas-active {
@@ -160,17 +334,20 @@ body.offcanvas-active {
 }
 
 .main-wrap {
-  margin-left: 260px;
-  background-color: var(--clr-neon);
+    margin-left: 260px;
+    background-image: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646886716/discofloorpurplestripe_rjakzy.svg');
 }
 
 .content-main {
   padding: 30px 3%;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Metal Mania", cursive;
+  color: var(--clr-neon);
 }
 
 .navbar-aside {
+  font-family: "Metal Mania", cursive;
   max-width: 260px;
   display: block;
   position: fixed;
@@ -178,7 +355,7 @@ body.offcanvas-active {
   bottom: 0;
   width: 100%;
   overflow-y: auto;
-  background-color: #847B89;
+  background-color: var(--clr-neon);
   box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.075);
   z-index: 10;
   border-right: 1px solid rgba(108, 117, 125, 0.25);
@@ -204,7 +381,7 @@ body.offcanvas-active {
   padding-left: 3%;
   padding-right: 3%;
   min-height: 72px;
-  background-color: #847B89;
+  background-color: var(--clr-neon);
   border-bottom: 1px solid rgba(108, 117, 125, 0.25);
 }
 .main-header .nav {
@@ -212,7 +389,7 @@ body.offcanvas-active {
 }
 .main-header .nav-item > a {
   border-radius: 0.25rem;
-  color: #adb5bd;
+  color: #77fcfe;
   display: block;
   text-decoration: none;
 }
@@ -314,12 +491,12 @@ body.aside-mini .menu-aside .menu-item.has-submenu .menu-link:after {
   margin-bottom: 5px;
 }
 .menu-aside .menu-item .icon {
-  color: #adb5bd;
+  color: #77fcfe;
   margin-right: 10px;
   font-size: 18px;
 }
 .menu-aside .active .icon {
-  color: #FC95CF;
+  color: var(--clr-neon);
 }
 .menu-aside .active {
   background-color: #ebf0fd;
@@ -371,7 +548,7 @@ body.aside-mini .menu-aside .menu-item.has-submenu .menu-link:after {
 }
 
 .nav-pills .nav-link {
-  color: #6c757d;
+  color: #77fcfe;
   font-weight: 500;
 }
 .nav-pills .nav-link:hover {
@@ -397,7 +574,11 @@ body.aside-mini .menu-aside .menu-item.has-submenu .menu-link:after {
   margin-top: 45px;
   margin-bottom: 20px;
 }
-
+.card-title{
+  margin-top: 20px;
+  color: var(--clr-neon);
+  font-size: 30px;
+}
 .b {
   font-weight: 600;
 }
@@ -533,7 +714,7 @@ a.itemside:hover .title {
 .card-user .card-header {
   position: relative;
   height: 100px;
-  background-color: #c3f19d !important;
+  background-color: #77fcfe !important;
   text-align: center;
 }
 .card-user .img-avatar {
@@ -715,7 +896,7 @@ ul.row-sm {
   display: inline-block;
   padding: 3px 7px;
   background: #f2f2f2;
-  border: 1px xolid #eee;
+  border: 1px solid #eee;
   border-radius: 3px;
   margin-top: 4px;
   margin-right: 2px;
@@ -739,7 +920,28 @@ ul.row-sm {
   color: #fff;
   background-color: #f30000;
 }
-
+/*sign-in adjustments*/
+.neon-button3{
+  margin: 0 auto;
+  display: block;
+}
+.signInBox {
+    background-image: url(https://res.cloudinary.com/dqbkfteqj/image/upload/v1646024391/palm-trees-and-pink-neon-light-frame-picture-id1130692029_hggxqh.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    font-family: "Metal Mania", cursive;
+}
+.signInCard {
+    box-shadow: 7px 12px 5px var(--clr-neon);
+    max-width: 600px;
+    margin-top: 200px;
+    
+}
+/**/
 .map-pin {
   border-radius: 3rem;
   background-color: red;
@@ -825,12 +1027,21 @@ ul.row-sm {
   height: 24px;
   max-width: none;
 }
-
 .form-inline input[type="number"] {
   max-width: 100px;
 }
-
-.form-control:hover,
+.form-control {
+  margin: 0 auto;
+  display: block;
+  width: 60%;
+  background-color: var(--clr-neon);
+  color: white;
+  font: bolder;
+}
+.form-control::placeholder{
+  color: white;
+  font: bold;
+}
 .form-select:hover {
   border-color: #FC95CF;
 }

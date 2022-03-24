@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\FashionShop",
-    "\\FashionShop\\client frontend\\src\\screens",
-    "\\FashionShop\\dashboard",
-    "\\FashionShop\\server"
+    "\\FashionShop\\server",
+    "\\FashionShop\\server\\Models"
   ],
-  "SelectedNode": "\\FashionShop\\server\\readME.txt.txt",
+  "SelectedNode": "\\FashionShop\\server\\Models\\OrderModel.js",
   "PreviewInSolutionExplorer": false
 }

@@ -28,14 +28,12 @@ const Login = ({ history }) => {
   return (
     <>
       <Toast />
-      <div
-        className="card shadow mx-auto"
-        style={{ maxWidth: "380px", marginTop: "100px" }}
-      >
+      <div className="signInCard mx-auto">
+       <div className="signInBox">
         <div className="card-body">
           {error && <Message variant="alert-danger">{error}</Message>}
           {loading && <Loading />}
-          <h4 className="card-title mb-4 text-center">Sign in</h4>
+          <h4 className="card-title text-center">Sign in</h4>
           <form onSubmit={submitHandler}>
             <div className="mb-3">
               <input
@@ -57,12 +55,13 @@ const Login = ({ history }) => {
             </div>
 
             <div className="mb-4">
-              <button type="submit" className="btn btn-primary w-100">
+              <button type="submit" className="neon-button3">
                 Login
               </button>
             </div>
           </form>
         </div>
+       </div>
       </div>
     </>
   );
