@@ -18,23 +18,23 @@ input:not(:checked) + #divMenu1 {
     flex: none;
     justify-content: left;
     color: #77fcfe;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
     color: var(--clr-neon);
     border: var(--clr-neon) 0.125em solid;
-    padding: 0.25em 1em;
+    padding: 0.30em 0.65em;
     border-radius: 0.25em;
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
     box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
     position: relative;
-    margin-bottom: 15%;
+    margin-bottom: 12%;
 }
     .cb1::before {
         pointer-events: none;
         content: "";
         position: absolute;
         background: var(--clr-neon);
-        top: 120%;
+        top: 100%;
         left: 0;
         width: 100%;
         height: 100%;
@@ -183,7 +183,7 @@ textarea:focus {
     color: var(--clr-neon);
     background-color: transparent;
     border: var(--clr-neon) 0.125em solid;
-    padding: 0.25em 1em;
+    padding: 0.25em 0.25em;
     border-radius: 0.25em;
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
     box-shadow: inset 0 0 0.7em 0 var(--clr-neon), 0 0 0.7em 0 var(--clr-neon);

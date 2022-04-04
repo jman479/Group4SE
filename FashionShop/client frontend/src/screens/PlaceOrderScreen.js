@@ -120,7 +120,7 @@ const PlaceOrderScreen = ({ history }) => {
                   <strong>Order info</strong>
                 </h5>
                 <p>Shipping: {cart.shippingAddress.country}</p>
-                <p>Pay method: {cart.paymentMethod}</p>
+                <p>Payment method: {cart.paymentMethod}</p>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ const PlaceOrderScreen = ({ history }) => {
                     <div id="divMenu1">
                       Coupon Code: <input type="text" id="couponCode"/>
                       <button class="neon-button2" type="submit" onClick={couponCodeHandler}>
-                         Enter
+                         Submit Coupon
                       </button>
                     </div>
                     
