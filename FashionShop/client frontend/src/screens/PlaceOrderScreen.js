@@ -5,7 +5,6 @@ import { createOrder } from "../Redux/Actions/OrderActions";
 import { ORDER_CREATE_RESET } from "../Redux/Constants/OrderConstants";
 import Header from "./../components/Header";
 import Message from "./../components/LoadingError/Error";
-
 const PlaceOrderScreen = ({ history }) => {
   window.scrollTo(0, 0);
 
@@ -13,6 +12,9 @@ const PlaceOrderScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
+
+  //coupon
+ 
 
   // Calculate Price
   const addDecimals = (num) => {
@@ -33,10 +35,9 @@ const PlaceOrderScreen = ({ history }) => {
         var newTaxPrice = shippingTaxPrice(Number(cart.itemsPrice));  // add 15 before tax applied
         cart.taxPrice = addDecimals(Number((0.0825 * newTaxPrice).toFixed(2))); // 8.25 percent tax applied including shipping
     }
+  //cart itemsPrice needs to deduct the appropriate coupon discount amount , BEFORE tax application
   cart.totalPrice = (
-    Number(cart.itemsPrice) +
-    Number(cart.shippingPrice) +
-    Number(cart.taxPrice)
+    Number(cart.itemsPrice) /* - Number(cart.coupon) */ + Number(cart.shippingPrice) + Number(cart.taxPrice)
   ).toFixed(2);
 
   const orderCreate = useSelector((state) => state.orderCreate);
@@ -61,6 +62,28 @@ const PlaceOrderScreen = ({ history }) => {
         totalPrice: cart.totalPrice,
       })
     );
+  };
+
+  //coupon string entry validity checks & coupon discount amount application
+  const couponCodeHandler = (e) => {
+      //console.log(e);
+      const enteredCode = document.getElementById('couponCode').value;
+      const validatedRegex = new RegExp("^[A-Za-z]+$");
+      //regex validation checking
+      if (validatedRegex.test(enteredCode)) {
+          //success, we need then validate their enteredCode exists within our already available coupon codes.
+          //and now we could add our own salt hash to the provided input to further extend security.
+          //now we need to update and set the coupon savings variable that is applied to total cost
+          console.log(enteredCode);
+          return true;
+      }
+      else {
+          //failed tests
+          alert("Invalid Coupon Code")
+          //clear invalid coupon input
+          document.getElementById('couponCode').value = '';
+          return false;
+      }
   };
 
   return (
@@ -153,8 +176,18 @@ const PlaceOrderScreen = ({ history }) => {
             )}
           </div>
           {/* total */}
-          <div className="col-lg-3 d-flex align-items-end flex-column mt-5 subtotal-order">
+          <div className="col-lg-3 d-flex flex-column mt-5 subtotal-order">
+               <label className="cb1" for="cb1">Enter Coupon Code?</label>
+                   <input type="checkbox" style={{ display: 'none' }} id="cb1"/>
+                    <div id="divMenu1">
+                      Coupon Code: <input type="text" id="couponCode"/>
+                      <button class="neon-button2" type="submit" onClick={couponCodeHandler}>
+                         Enter
+                      </button>
+                    </div>
+                    
             <table className="table table-bordered">
+               
               <tbody>
                 <tr>
                   <td>
@@ -171,6 +204,13 @@ const PlaceOrderScreen = ({ history }) => {
                 <tr>
                   <td>
                     <strong>Tax</strong>
+                  </td>
+                  <td>${cart.taxPrice}</td>
+                </tr> 
+                {/* coupon still broken */}
+                <tr> 
+                  <td>
+                    <strong>Coupon Savings</strong>
                   </td>
                   <td>${cart.taxPrice}</td>
                 </tr>

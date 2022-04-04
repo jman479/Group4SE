@@ -100,26 +100,26 @@ const Header = () => {
               </div>
                 
               <div className="col-md-6 col-8 d-flex align-items-center">
-                   <a className="headerSocial" href="">
+                   <a className="headerSocial" href="about">
                      <i class="headerSocial fab fa-facebook"></i>
                    </a>
-                   <a className="headerSocial" href="">
+                   <a className="headerSocial" href="about">
                      <i class="headerSocial fab fa-instagram"></i>
                    </a>
-                   <a className="headerSocial" href="">
+                   <a className="headerSocial" href="about">
                      <i class="headerSocial fab fa-twitter"></i>
                    </a>
-                   <a className="headerSocial" href="">
+                   <a className="headerSocial" href="about">
                      <i className="headerSocial fab fa-linkedin"></i>
                    </a>
-                   <a className="headerSocial" href="">
+                   <a className="headerSocial" href="about">
                      <i class="headerSocial fab fa-github"></i>
                    </a>
                 <form onSubmit={submitHandler} className="input-group">
                   <input
                     type="search"
                     className="neon-button3"
-                    placeholder="Search for items"
+                    placeholder="Product Search "
                     onChange={(e) => setKeyword(e.target.value)}
                   />
                   <button type="submit" className="neon-button3">

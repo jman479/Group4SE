@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const couponSchema = mongoose.Schema({
     code: {
       type: String,
+      ref: 'couponCode',
       required: true,
     },
     expirationDate: {

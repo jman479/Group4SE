@@ -47,8 +47,6 @@ const Header = () => {
           <datalist id="search_terms">
             <option value="Products" />
             <option value="New orders" />
-            <option value="Apple iphone" />
-            <option value="Ahmed Hassan" />
           </datalist>
         </form>
       </div>
