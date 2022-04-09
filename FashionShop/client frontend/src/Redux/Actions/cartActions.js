@@ -1,3 +1,4 @@
+import URL from "../Url";
 import axios from "axios";
 import {
   CART_ADD_ITEM,
@@ -8,7 +9,7 @@ import {
 
 // ADD TO CART
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-  const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await axios.get(`${URL}/api/products/${id}`);
 
   dispatch({
     type: CART_ADD_ITEM,

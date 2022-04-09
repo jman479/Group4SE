@@ -325,8 +325,10 @@ a.disabled {
 body {
     position: relative;
     min-height: 100vh;
-    background-image: url('https://res.cloudinary.com/dqbkfteqj/image/upload/c_scale,e_auto_color,h_1304,w_1964/v1646562640/bricks_bwz7xr.png');
+    background-color: transparent;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646886716/discofloorpurplestripe_rjakzy.svg');
 }
 
 body.offcanvas-active {
@@ -335,7 +337,7 @@ body.offcanvas-active {
 
 .main-wrap {
     margin-left: 260px;
-    background-image: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1646886716/discofloorpurplestripe_rjakzy.svg');
+
 }
 
 .content-main {

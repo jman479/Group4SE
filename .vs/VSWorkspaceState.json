@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\FashionShop",
-    "\\FashionShop\\client frontend",
     "\\FashionShop\\client frontend\\src",
-    "\\FashionShop\\client frontend\\src\\components",
-    "\\FashionShop\\client frontend\\src\\screens",
-    "\\FashionShop\\server",
-    "\\FashionShop\\server\\Middleware",
-    "\\FashionShop\\server\\Routes",
-    "\\FashionShop\\server\\utils"
+    "\\FashionShop\\client frontend\\src\\Redux",
+    "\\FashionShop\\client frontend\\src\\Redux\\Actions",
+    "\\FashionShop\\dashboard",
+    "\\FashionShop\\dashboard\\src",
+    "\\FashionShop\\dashboard\\src\\Redux",
+    "\\FashionShop\\dashboard\\src\\Redux\\Actions",
+    "\\FashionShop\\dashboard\\src\\screens"
   ],
-  "SelectedNode": "\\FashionShop\\client frontend\\src\\screens\\PlaceOrderScreen.js",
+  "SelectedNode": "\\FashionShop\\dashboard\\src\\Redux\\Actions\\userActions.js",
   "PreviewInSolutionExplorer": false
 }
