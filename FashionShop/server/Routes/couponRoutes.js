@@ -9,7 +9,7 @@ const couponRoute = express.Router();
 couponRoute.post(
   "/",
   asyncHandler(async (req, res) => {
-    console.log("Got body:", req.body)
+    console.log("couponRoute.post: Got body:", req.body);
     const { code, expirationDate, percentDiscount } = req.body;
     const couponExist = await Coupon.findOne({ code });
     if (couponExist) {
@@ -23,14 +23,39 @@ couponRoute.post(
       });
       if (coupon) {
         const createdCoupon = await coupon.save();
-        console.log("coupon exists?")
+        console.log("coupon exists?");
         res.status(201).json(createdCoupon);
       } else {
         res.status(400);
-        console.log("coupon NOT exists?")
+        console.log("coupon NOT exists?");
         throw new Error("Invalid coupon data");
       }
     }
+  })
+);
+
+// DELETE COUPON
+couponRoute.delete(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    console.log("couponRoute.delete: req.params.id:", req.params.id);
+    const coupon = await Coupon.findById(req.params.id);
+    if (coupon) {
+      await coupon.remove();
+      res.json({ message: "Coupon deleted" });
+    } else {
+      res.status(404);
+      throw new Error("Coupon not Found");
+    }
+  })
+);
+
+// GET ALL COUPON ADMIN
+couponRoute.get(
+  "/",
+  asyncHandler(async (req, res) => {
+    const coupons = await Coupon.find({});
+    res.json(coupons);
   })
 );
 
