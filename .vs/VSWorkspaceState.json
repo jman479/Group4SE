@@ -3,14 +3,12 @@
     "",
     "\\FashionShop",
     "\\FashionShop\\client frontend\\src",
-    "\\FashionShop\\client frontend\\src\\Redux",
-    "\\FashionShop\\client frontend\\src\\Redux\\Actions",
     "\\FashionShop\\dashboard",
-    "\\FashionShop\\dashboard\\src",
+    "\\FashionShop\\dashboard\\src\\components\\Home",
     "\\FashionShop\\dashboard\\src\\Redux",
     "\\FashionShop\\dashboard\\src\\Redux\\Actions",
-    "\\FashionShop\\dashboard\\src\\screens"
+    "\\FashionShop\\server"
   ],
-  "SelectedNode": "\\FashionShop\\dashboard\\src\\Redux\\Actions\\userActions.js",
+  "SelectedNode": "\\FashionShop\\dashboard\\.env",
   "PreviewInSolutionExplorer": false
 }
