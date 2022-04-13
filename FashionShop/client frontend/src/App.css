@@ -125,14 +125,14 @@ background-size: cover;
 }
 .carousel__slide:nth-child(2) {
   background-color: #000000;
-  background-size: contain;
-  background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/shoes-craze-sale-facebook-ad-design-template-b1d1738fd5e9e0f6e3152ec502a1c2e1_screen.jpg?ts=1567579016');
+  background-size: cover;
+  background-image: url('https://t3.ftcdn.net/jpg/02/74/05/62/240_F_274056256_3I7cvSpoxRzMmnHVgeXZ8zLt58wN75Y0.jpg');
 }.carousel__slide:nth-child(3) {
   background-image: url('http://3.bp.blogspot.com/-2cb7Ef__n70/ViRnBvIXRYI/AAAAAAAAAFY/WAyWXaoB-7U/s1600/Running.jpg');
   background-color: #000000;
   background-size: cover;
 }.carousel__slide:nth-child(4) {
-  background-image: url('https://m.media-amazon.com/images/G/01/2022/homepage4.04/WOMENS-SANDALS-APRIL-HERO-2880x1400.jpg');
+  background-image: url('https://t3.ftcdn.net/jpg/02/78/68/36/240_F_278683646_XmlURVR2Zhjc7hEJ8fIGL38jZSqYBXVY.jpg');
   background-color: #000000;
   background-size: cover;
 }
