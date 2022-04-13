@@ -119,14 +119,22 @@ ol, li {
 
 .carousel__slide:nth-child(1) {
   background-color: #000000;
-  
+  background-image: url('https://m.media-amazon.com/images/I/61A8fR8doxL._SX3000_.jpg');
+background-size: cover;
+
 }
 .carousel__slide:nth-child(2) {
   background-color: #000000;
+  background-size: contain;
+  background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/shoes-craze-sale-facebook-ad-design-template-b1d1738fd5e9e0f6e3152ec502a1c2e1_screen.jpg?ts=1567579016');
 }.carousel__slide:nth-child(3) {
+  background-image: url('http://3.bp.blogspot.com/-2cb7Ef__n70/ViRnBvIXRYI/AAAAAAAAAFY/WAyWXaoB-7U/s1600/Running.jpg');
   background-color: #000000;
+  background-size: cover;
 }.carousel__slide:nth-child(4) {
+  background-image: url('https://m.media-amazon.com/images/G/01/2022/homepage4.04/WOMENS-SANDALS-APRIL-HERO-2880x1400.jpg');
   background-color: #000000;
+  background-size: cover;
 }
 .carousel__snapper {
   position: absolute;
