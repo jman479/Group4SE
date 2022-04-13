@@ -62,7 +62,7 @@ const ShippingScreen = ({ history }) => {
             required
             onChange={(e) => setCountry(e.target.value)}
           />
-          <button className="neon-button" type="submit">Continue</button>
+          <button className="neon-button" type="submit">Confirm</button>
         </form>
       </div>
     </>

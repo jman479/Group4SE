@@ -11,7 +11,155 @@ body {
 }
     
 /*end test
+/***********************************************************************/
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
 
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+  padding-top: 20%;
+  width: 90%;
+  perspective: 100px;
+  margin:auto;
+  margin-top: 10px;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  counter-increment: item;
+}
+
+.carousel__slide:nth-child(1) {
+  background-color: #000000;
+  
+}
+.carousel__slide:nth-child(2) {
+  background-color: #000000;
+}.carousel__slide:nth-child(3) {
+  background-color: #000000;
+}.carousel__slide:nth-child(4) {
+  background-color: #000000;
+}
+.carousel__snapper {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+  margin:auto ;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease-in-out;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+
+
+
+/***********************************************************************/
 
 */
 img{
@@ -840,38 +988,43 @@ a.headerSocial:hover::after {
 /* LOGIN */
 .login-center {
   padding: 40px 0;
+  width: 30%;
 }
 .Login,
 .Login2 {
-  background-image: url('https://res.cloudinary.com/dqbkfteqj/image/upload/v1645955018/login_bg_i5bkac.jpg');
+  background-image: url('https://ak.picdn.net/shutterstock/videos/1018020805/thumb/1.jpg');
   background-repeat: no-repeat;
   background-position: center; 
+  background-size: cover;
   border-radius: 5px;
   position: relative;
   padding: 55px 105px 20px;
   box-shadow: 0 1px 11px hsl(317 100% 54%);
   text-align: center;
-  width: 29.6%;
+  width: 50%;
   font-size: 25px;
 }
 .Login input {
-  width: 125%;
+  width: 100%;
   justify-content: center;
   padding: 15px 0px 0px 6px;
   margin-top: 7px;
+  margin-bottom: 8px;
   margin-left: -30px;
-  border: 1px solid var(--clr-neon);
+  border: 2px solid var(--clr-neon);
   border-radius: 20px;
   color: var(--clr-neon);
   text-align: center;
 }
 .Login input:focus {
   outline: 0px;
+
+  
 }
 .Login button,
 .Login2 button {
   width: 100%;
-  margin-top: 200px;
+  margin-top: 150px;
   border: 0;
   background-color: var(--clr-neon);
   border-radius: 5px;
