@@ -2,13 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\FashionShop",
+    "\\FashionShop\\client frontend",
     "\\FashionShop\\client frontend\\src",
-    "\\FashionShop\\dashboard",
-    "\\FashionShop\\dashboard\\src\\components\\Home",
-    "\\FashionShop\\dashboard\\src\\Redux",
-    "\\FashionShop\\dashboard\\src\\Redux\\Actions",
-    "\\FashionShop\\server"
+    "\\FashionShop\\client frontend\\src\\Redux",
+    "\\FashionShop\\client frontend\\src\\Redux\\Actions",
+    "\\FashionShop\\server",
+    "\\FashionShop\\server\\Models",
+    "\\FashionShop\\server\\Routes"
   ],
-  "SelectedNode": "\\FashionShop\\dashboard\\.env",
+  "SelectedNode": "\\FashionShop\\server\\Models\\OrderModel.js",
   "PreviewInSolutionExplorer": false
 }

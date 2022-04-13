@@ -1,4 +1,3 @@
-import URL from "../Url";
 import {
   ORDER_CREATE_FAIL,
   ORDER_CREATE_REQUEST,
@@ -14,6 +13,7 @@ import {
   ORDER_PAY_SUCCESS,
 } from "../Constants/OrderConstants";
 import axios from "axios";
+import URL from "../Url";
 import { CART_CLEAR_ITEMS } from "../Constants/CartConstants";
 import { logout } from "./userActions";
 
