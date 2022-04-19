@@ -15,6 +15,11 @@ const couponSchema = mongoose.Schema({
       required: true,
       default: 0.0,
     },
+    isEnabled: {
+      type: Boolean,
+      required: true,
+      default: true,
+    },
 }, {
   timestamps: true,
 });

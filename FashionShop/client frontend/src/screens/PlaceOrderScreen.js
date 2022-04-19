@@ -10,11 +10,9 @@ const PlaceOrderScreen = ({ history }) => {
 
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+  const coupon = useSelector((state) => state.coupon);
   const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
-
-  //coupon
- 
+  const { userInfo } = userLogin; 
 
   // Calculate Price
   const addDecimals = (num) => {
@@ -37,7 +35,7 @@ const PlaceOrderScreen = ({ history }) => {
     }
   //cart itemsPrice needs to deduct the appropriate coupon discount amount , BEFORE tax application
   cart.totalPrice = (
-    Number(cart.itemsPrice) /* - Number(cart.coupon) */ + Number(cart.shippingPrice) + Number(cart.taxPrice)
+    Number(cart.itemsPrice) - ((Number(coupon.discount) / 100) * Number(cart.itemsPrice)) + Number(cart.shippingPrice) + Number(cart.taxPrice)
   ).toFixed(2);
 
   const orderCreate = useSelector((state) => state.orderCreate);
@@ -66,24 +64,27 @@ const PlaceOrderScreen = ({ history }) => {
 
   //coupon string entry validity checks & coupon discount amount application
   const couponCodeHandler = (e) => {
-      //console.log(e);
-      const enteredCode = document.getElementById('couponCode').value;
-      const validatedRegex = new RegExp("^[A-Za-z]+$");
-      //regex validation checking
-      if (validatedRegex.test(enteredCode)) {
-          //success, we need then validate their enteredCode exists within our already available coupon codes.
-          //and now we could add our own salt hash to the provided input to further extend security.
-          //now we need to update and set the coupon savings variable that is applied to total cost
-          console.log(enteredCode);
-          return true;
-      }
-      else {
-          //failed tests
-          alert("Invalid Coupon Code")
-          //clear invalid coupon input
-          document.getElementById('couponCode').value = '';
-          return false;
-      }
+    // console.log(e);
+    const enteredCode = document.getElementById('couponCode').value;
+    const validatedRegex = new RegExp("^[A-Za-z]+$");
+    
+    // regex validation checking
+    if (validatedRegex.test(enteredCode)) {
+      //success, we need then validate their enteredCode exists within our already available coupon codes.
+      //and now we could add our own salt hash to the provided input to further extend security.
+      //now we need to update and set the coupon savings variable that is applied to total cost
+
+      dispatch(listCouponDetails(enteredCode));
+
+      return true;
+    } else {
+      //failed tests
+      alert("Invalid Coupon Code")
+      //clear invalid coupon input
+      document.getElementById('couponCode').value = '';
+      
+      return false;
+    }
   };
 
   return (
@@ -207,12 +208,12 @@ const PlaceOrderScreen = ({ history }) => {
                   </td>
                   <td>${cart.taxPrice}</td>
                 </tr> 
-                {/* coupon still broken */}
+                {/* coupon */}
                 <tr> 
                   <td>
                     <strong>Coupon Savings</strong>
                   </td>
-                  <td>${cart.taxPrice}</td>
+                  <td>${((Number(coupon.discount) / 100) * Number(cart.itemsPrice)).toFixed(2)}</td>
                 </tr>
                 <tr>
                   <td>
