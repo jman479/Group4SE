@@ -27,7 +27,7 @@ export const listCouponDetails = (code) => async (dispatch, getState) => {
         code: data.code, 
         expirationDate: data.expirationDate, 
         percentDiscount: data.percentDiscount,
-        isEnabled: false
+        isEnabled: true
       };
       // Since coupon is expired, set isEnabled to false and update the record
       try {
@@ -48,7 +48,7 @@ export const listCouponDetails = (code) => async (dispatch, getState) => {
         code: data.code, 
         expirationDate: data.expirationDate, 
         percentDiscount: data.percentDiscount,
-        isEnabled: false
+        isEnabled: true
       };
       // Since coupon is going to be used, set isEnabled to false and update the record
       try {
